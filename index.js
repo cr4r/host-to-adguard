@@ -4,7 +4,7 @@ const config = require('./config.json')
 
 const run = async (cfg) => {
   a = await cpl(cfg)
-  b = a.join('\n').replace('@adguard\/hostlist-compiler', config.name)
+  b = a.filter(isi => isi.length > 0).join('\n').replace('@adguard\/hostlist-compiler', config.name)
   await writeFileSync('hosts', b)
 }
 
