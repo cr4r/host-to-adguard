@@ -1,0 +1,19 @@
+{
+  "name": "Coders Family",
+  "license": "GPLv3",
+  "sources": [
+    {
+      "type": "adblock",
+      "source": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
+    }
+  ],
+  "transformations": [
+    "Deduplicate",
+    "Compress"
+  ]
+}

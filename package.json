@@ -1,0 +1,28 @@
+{
+  "name": "host-to-adguard",
+  "version": "1.0.0",
+  "description": "convert hosts to host versi adguard",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cr4r/host-to-adguard.git"
+  },
+  "keywords": [
+    "hosts",
+    "adguard",
+    "convert"
+  ],
+  "author": "cr4r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cr4r/host-to-adguard/issues"
+  },
+  "homepage": "https://github.com/cr4r/host-to-adguard#readme",
+  "dependencies": {
+    "@adguard/hostlist-compiler": "^1.0.12"
+  }
+}
