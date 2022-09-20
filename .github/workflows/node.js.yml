@@ -23,15 +23,18 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Checkout
       uses: actions/setup-node@v3
+    
+    - name: Menjalankan Program
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      - run: npm i
-      - run: node index.js
-      - run: echo "PACKAGED_OUTPUTPATH=${PWD}/hosts" >> $GITHUB_ENV
-      - run: echo "PACKAGED_OUTPUTDATE=$(date +"%Y.%m.%d.%H%M")" >> $GITHUB_ENV
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -&&sudo apt-get install -y nodejs&&npm i
+          node index.js
+          echo "PACKAGED_OUTPUTPATH=${PWD}/hosts" >> $GITHUB_ENV
+          echo "PACKAGED_OUTPUTDATE=$(date +"%Y.%m.%d.%H%M")" >> $GITHUB_ENV
     - name: Upload hasil convert
       uses: cr4r/release-action@v1
       with:
