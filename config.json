@@ -23,6 +23,16 @@
       ]
     },
     {
+      "name": "AdguardHome Standar",
+      "type": "adblock",
+      "source": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
+    },
+    {
       "name": "Adaway",
       "type": "adblock",
       "source": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
@@ -41,10 +51,63 @@
         "Validate",
         "Compress"
       ]
+    },
+    {
+      "name": "Dandelion Sprout's Anti-Malware List",
+      "type": "adblock",
+      "source": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
+    },
+    {
+      "name": "Scam Blocklist by DurableNapkin",
+      "type": "adblock",
+      "source": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
+    },
+    {
+      "name": "IDN: ABPindo",
+      "type": "adblock",
+      "source": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
+    },
+    {
+      "name": "WindowsSpyBlocker - Hosts spy rules",
+      "type": "adblock",
+      "source": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
+    },
+    {
+      "name": "Hosts Anti Ads Youtube",
+      "type": "adblock",
+      "source": "https://gist.githubusercontent.com/anilshanbhag/7576643/raw/1a2b22edbfb609366548982a3638ba155bd8c33e/hosts",
+      "transformations": [
+        "RemoveComments",
+        "Validate",
+        "Compress"
+      ]
     }
   ],
   "transformations": [
     "Deduplicate",
     "Compress"
+  ],
+  "exclusions": [
+    "googlesyndication.com"
   ]
 }

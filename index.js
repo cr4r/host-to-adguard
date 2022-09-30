@@ -8,7 +8,7 @@ const exclusions = [
 
 const run = async (cfg) => {
   a = await cpl(cfg)
-  b = a.filter(isi => !exclusions.includes(isi.replace(/[\|^]/g, '')) && isi.length > 0)
+  b = a.filter(isi => isi.length > 0)
     .join('\n')
     .replace('@adguard\/hostlist-compiler', config.name)
   await writeFileSync('hosts', b)
